@@ -1,0 +1,16 @@
+[package]
+name = "context-menu-crash"
+version = "0.0.0"
+description = "A Tauri App"
+authors = ["you"]
+edition = "2021"
+
+[build-dependencies]
+tauri-build = { version = "=2.0.0-beta.15", features = [] }
+
+[dependencies]
+tauri = { version = "=2.0.0-beta.19", features = [] }
+
+[dependencies.tokio]
+version = "=1.37.0"
+features = ["full"]
