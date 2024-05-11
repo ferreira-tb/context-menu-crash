@@ -1,4 +1,4 @@
-https://github.com/tauri-apps/muda/issues/173
+https://github.com/tauri-apps/muda/issues/193
 
 How to reproduce the issue:
 
