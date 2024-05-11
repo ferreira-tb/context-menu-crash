@@ -1,16 +1,26 @@
-# Tauri + Vue 3 + TypeScript
+How to reproduce the issue:
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+- Open a context menu by right-clicking anywhere in the window.
+- Click on "item1"
+- Open the "main-menu" on the main menu bar.
+- Click on "sub-item1"
+- Click on "sub-item2"
+- The app crashes.
 
-## Recommended IDE Setup
+## Environment
+- OS: Windows 10.0.19045 X64
+- WebView2: 124.0.2478.80
+- MSVC: Visual Studio Community 2022
+- rustc: 1.78.0 (9b00956e5 2024-04-29)
+- cargo: 1.78.0 (54d8815d0 2024-03-26)
+- rustup: 1.27.1 (54dd3d00f 2024-04-24)
+- Rust toolchain: stable-x86_64-pc-windows-msvc (environment override by RUSTUP_TOOLCHAIN)
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
-
-## Type Support For `.vue` Imports in TS
-
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's Take Over mode by following these steps:
-
-1. Run `Extensions: Show Built-in Extensions` from VS Code's command palette, look for `TypeScript and JavaScript Language Features`, then right click and select `Disable (Workspace)`. By default, Take Over mode will enable itself if the default TypeScript extension is disabled.
-2. Reload the VS Code window by running `Developer: Reload Window` from the command palette.
-
-You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/volar/discussions/471).
+## Packages
+- tauri [RUST]: 2.0.0-beta.19
+- tauri-build [RUST]: 2.0.0-beta.15
+- wry [RUST]: 0.39.5
+- tao [RUST]: 0.28.0
+- tauri-cli [RUST]: 2.0.0-beta.13
+- @tauri-apps/api [NPM]: 2.0.0-beta.11
+- @tauri-apps/cli [NPM]: 2.0.0-beta.13
