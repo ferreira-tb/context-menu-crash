@@ -25,7 +25,7 @@ async fn context_menu(app: AppHandle, window: Window) {
 
   window.on_menu_event(move |_, _| {
     async_runtime::spawn(async move {
-      sleep(Duration::from_secs(1)).await;
+      sleep(Duration::from_secs(5)).await;
       println!("context menu event");
     });
   });
@@ -55,7 +55,7 @@ fn main() {
       let window = app.get_webview_window("main").unwrap();
       window.on_menu_event(|_, event| {
         async_runtime::spawn(async move {
-          sleep(Duration::from_secs(1)).await;
+          sleep(Duration::from_secs(5)).await;
           println!("menu event: {:?}", event);
         });
       });
